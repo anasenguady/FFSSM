@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Embauche {
 
-    private LocalDate debut;
+    private final LocalDate debut;
 
     private LocalDate fin;
 
@@ -23,8 +23,10 @@ public class Embauche {
      * @param dateFin la date à laquelle cette embauche est terminée
      */
     public void terminer(LocalDate dateFin) {
-         // TODO: Implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");	    
+        if (fin == null){
+            fin = dateFin;
+        }
+        
     }
     
     /**
